@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <meta name="generator" content="Hugo 0.104.2">
+      <title>Dating Sara</title>
+      
+      <!-- Favicon-->
+      <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+      <link href='https://fonts.googleapis.com/css?family=Wire+One|Raleway:300' rel='stylesheet' type='text/css'>
+      <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/carousel/">
+      <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+       <!-- Custom styles for this template -->
+      <link href="carousel.css" rel="stylesheet">
+      
+      <!--Styles-->
+      <style>
+        .bd-placeholder-img {
+          font-size: 1.125rem;
+          text-anchor: middle;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          user-select: none;
+        }
+
+        @media (min-width: 768px) {
+          .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+          }
+        }
+
+        .b-example-vr {
+          flex-shrink: 0;
+          width: 1.5rem;
+          height: 100vh;
+        }
+
+        .bi {
+          vertical-align: -.125em;
+          fill: currentColor;
+        }
+
+        .nav-scroller {
+          position: relative;
+          z-index: 2;
+          height: 2.75rem;
+          overflow-y: hidden;
+        }
+
+        .nav-scroller .nav {
+          display: flex;
+          flex-wrap: nowrap;
+          padding-bottom: 1rem;
+          margin-top: -1px;
+          overflow-x: auto;
+          text-align: center;
+          white-space: nowrap;
+          -webkit-overflow-scrolling: touch;
+        }
+        .overlay{
+          position:absolute;
+          bottom:0;
+          left:0;
+          right:0;
+          top:0;
+          background-position:center;
+          background-size:cover;
+          opacity: 0.7;
+        }
+        .carousel-item{
+          background:#000;
+          position:relative;
+        }
+        body {
+          background-color: #DC7F9B;
+        }
+       /*BORDERS*/
+        .colour-block {
+          background:#DC7F9B;
+          width: 100%;
+          padding:7% 20% 10% 20%;
+          color:#fff;
+        }
+        .white-block {
+          background:#94BFA7;
+          width:100%;
+          padding:7% 20% 10% 20%;
+          color:##fff;
+        }
+        h1 {
+          text-align:center;
+          font-size:80px;
+          font-family:'wire one', serif;
+          font-weight:normal;
+        }
+        h5 {
+          text-align:center;
+          font-size:40px;
+          font-family:'wire one', serif;
+          font-weight:normal;
+        }
+        p {
+          font-size:20px;
+          font-family:'Raleway', serif;
+        }
+        /*----------------*/
+        /*  SCALLOP down  */
+        /*----------------*/
+        .scallop-down{
+          height:100px;
+          width:100%;
+          background: -webkit-gradient(radial, 50% 0, 10, 50% 0, 40, from(#DC7F9B), color-stop(0.49, #DC7F9B), color-stop(0.51, #BBDDCB), to(#94BFA7));
+        -webkit-background-size: 49px 100%;
+        }
+
+
+      /*----------------*/
+      /*  SCALLOP up    */
+      /*----------------*/
+      .scallop-up{
+        height:100px;
+        width:100%;
+        background: -webkit-gradient(radial, 50% 100%, 10, 50% 100%, 40, from(#DC7F9B), color-stop(0.49, #DC7F9B), color-stop(0.51, #BBDDCB), to(#94BFA7));
+      -webkit-background-size: 49px 100%;
+      }
+      /*IMAGE*/
+      img {
+        border-radius: 50%;
+       }
+      /*FORM*/
+      form-style-3{
+	      max-width: 450px;
+	      font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+      }
+      .form-style-3 label{
+      	display:block;
+      	margin-bottom: 10px;
+      }
+      .form-style-3 label > span{
+      	float: left;
+      	width: 100px;
+      	color: #F072A9;
+      	font-weight: bold;
+      	font-size: 13px;
+      	text-shadow: 1px 1px 1px #fff;
+      }
+      .form-style-3 fieldset{
+      	border-radius: 10px;
+      	-webkit-border-radius: 10px;
+      	-moz-border-radius: 10px;
+      	margin: 0px 0px 10px 0px;
+      	border: 1px solid #FFD2D2;
+      	padding: 20px;
+      	background: #FFF4F4;
+      	box-shadow: inset 0px 0px 15px #FFE5E5;
+      	-moz-box-shadow: inset 0px 0px 15px #FFE5E5;
+      	-webkit-box-shadow: inset 0px 0px 15px #FFE5E5;
+      }
+      .form-style-3 fieldset legend{
+      	color: #FFA0C9;
+      	border-top: 1px solid #FFD2D2;
+      	border-left: 1px solid #FFD2D2;
+      	border-right: 1px solid #FFD2D2;
+      	border-radius: 5px 5px 0px 0px;
+      	-webkit-border-radius: 5px 5px 0px 0px;
+      	-moz-border-radius: 5px 5px 0px 0px;
+      	background: #FFF4F4;
+      	padding: 0px 8px 3px 8px;
+      	box-shadow: -0px -1px 2px #F1F1F1;
+      	-moz-box-shadow:-0px -1px 2px #F1F1F1;
+      	-webkit-box-shadow:-0px -1px 2px #F1F1F1;
+      	font-weight: normal;
+      	font-size: 12px;
+      }
+      .form-style-3 textarea{
+      	width:250px;
+      	height:100px;
+      }
+      .form-style-3 input[type=text],
+      .form-style-3 input[type=date],
+      .form-style-3 input[type=datetime],
+      .form-style-3 input[type=number],
+      .form-style-3 input[type=search],
+      .form-style-3 input[type=time],
+      .form-style-3 input[type=url],
+      .form-style-3 input[type=email],
+      .form-style-3 select, 
+      .form-style-3 textarea{
+      	border-radius: 3px;
+      	-webkit-border-radius: 3px;
+      	-moz-border-radius: 3px;
+      	border: 1px solid #FFC2DC;
+      	outline: none;
+      	color: #F072A9;
+      	padding: 5px 8px 5px 8px;
+      	box-shadow: inset 1px 1px 4px #FFD5E7;
+      	-moz-box-shadow: inset 1px 1px 4px #FFD5E7;
+      	-webkit-box-shadow: inset 1px 1px 4px #FFD5E7;
+      	background: #FFEFF6;
+      	width:50%;
+      }
+      .form-style-3  input[type=submit],
+      .form-style-3  input[type=button]{
+      	background: #EB3B88;
+      	border: 1px solid #C94A81;
+      	padding: 5px 15px 5px 15px;
+      	color: #FFCBE2;
+      	box-shadow: inset -1px -1px 3px #FF62A7;
+      	-moz-box-shadow: inset -1px -1px 3px #FF62A7;
+      	-webkit-box-shadow: inset -1px -1px 3px #FF62A7;
+      	border-radius: 3px;
+      	border-radius: 3px;
+      	-webkit-border-radius: 3px;
+      	-moz-border-radius: 3px;	
+      	font-weight: bold;
+      }
+      .required{
+      	color:red;
+      	font-weight:normal;
+      }
+      
+      /*COLORED LIST*/
+              
+        ul {
+          display: block;
+          margin-left: -10px;
+        }
+
+        ul li {
+          display: block;
+          position: relative;
+        }
+
+        ul li:not(:last-child) {
+          margin-bottom: 16px;
+        }
+
+        ul li:before {
+          content: "";
+          position: absolute;
+          top: 1.2em;
+          left: -30px;
+          margin-top: -.9em;
+          background: #f69ec4;
+          height: 12px;
+          width: 12px;
+          border-radius: 50%;
+        }
+    
+      </style>
+
+    </head>
+    <body>
+
+    <!------------------------------------------------------------------------------------------------>
+    <!--Header -->
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top"
+      style="background-color:#94BFA7;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+
+
+           <!--<img src="assets/img/sara-logo.png" alt="Leo's Rapid Service logo" 
+                    width="100" height="100"/>-->
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-5">
+                            <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#!">Gallery</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#!">Form</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!------------------------------------------------------------------------------------------------>
+      <!-- Gallery 
+      <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        Carousel Indicator numbers
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        
+        </div>
+        <div class="carousel-inner"> -->
+        <!--Slide 1
+          <div class="carousel-item active">
+              <img class="overlay" src="" style="width:100%; height: 550px;">
+              <div class="container">
+              <div class="carousel-caption text-start">
+                <h1>Blah</h1>
+                <p>blah blah</p>
+                Link to About Section
+              </div>
+            </div>
+          </div>
+
+          Slide 2
+          <div class="carousel-item">
+              <img class="overlay" src="" style="width:100%; height: 550px;">
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>Blah</h1>
+                <p>blah blah</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        Left and Right buttons
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>-->
+     
+      <div class="container marketing">
+      <link href='https://fonts.googleapis.com/css?family=Wire+One|Raleway:300' rel='stylesheet' type='text/css'>
+      <div class="scallop-up fixed "></div>
+      <div class="colour-block">
+        <!--ABOUT-->
+       
+        <h1>About Me</h1>
+        <div class="order-md-7">
+         <table>
+                <tr>
+                  <td>
+                    <!--Image -->
+                    <div class="col-md-">
+                        <img src="assets/img/flower-pic.jpg" height="500" width="350"" >
+                    </div>
+                  <td>
+                      <p class="lead text-center">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+                    </h1>
+                </tr>
+            </table>         
+        </div>
+      </div>
+      <div class="scallop-down"></div>
+      <div class="white-block">
+        <h1>What I'm Looking For:</h1>
+        <!--Checklist-->
+        <ul style:>
+            <li class="">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+            <li class="">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+            <li class="">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+            <li class="">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+        </ul>
+
+      </div>
+      <div class="scallop-up"></div>
+      <div class="colour-block">
+        <h1>Want To Date Me?</h1>
+        <h6 class="lead text-center">Fill out my form</h6>
+        <div class="form-style-3">
+        <form>
+        <fieldset><legend></legend>
+        <label for="field1"><span>Name </span><input type="text" class="input-field" name="field1" value="" /></label>
+        <label for="field2"><span>Instagram </span><input type="email" class="input-field" name="field2" value="" /></label>
+        <label for="field3"><span>Phone </span><input type="text" class="input-field" name="field3" value="" /></label>
+        <label for="field4"><span>Age </span><input type="text" class="input-field" name="field4" value="" /></label>
+        <label for="field5"><span>Occupation </span><input type="text" class="input-field" name="field5" value="" /></label>
+        <label for="field6"><span>Message </span><textarea name="field6" class="textarea-field"></textarea></label>
+        <label><span> </span><input type="submit" value="Submit" /></label>
+        </fieldset>
+        </form>
+        </div>
+      </div>
+
+    <!------------------------------------------------------------------------------------------------>
+      <!--Footer: ADD FANCY FOOTER STYLES
+                  ADD CONTACT LINK -->
+      <footer class="container">
+        <p class="col-md-4 mb-0 text-muted text-center">Dating Sara &copy; 2023
+        <a href="/" class="align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+            
+            <!--Logo Here -->
+            <!--img src="assets/img/logo.png" alt="Leo's Rapid Service logo" 
+                        width="45" height="45"/-->    
+        </a>
+        </p>
+      </footer>
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
